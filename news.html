@@ -7,57 +7,49 @@
   <link href="main.css" rel="stylesheet">
 
 
+
+  <!-- Including Open Sans Condensed from Google Fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic" />
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-  <!--<script src="jquery.rss.min.js"></script>-->
+  <script src="main.js"></script>
   
 </head>
 
 <body>
   <div>
+		 
+		<div class="dropdown">
+				<button class="dropbtn">Breaking News</button>
+				<div class="dropdown-content">
+				  <a href="#" onclick="FnFnewsUrl('www.aljazeera.com/xml/rss/all.xml','al-jazeera.png')"><img class="fnfnewsicon" src="al-jazeera.png"/></a>
+				  <a href="#" onclick="FnFnewsUrl('http://feeds.bbci.co.uk/news/world/rss.xml','bbc.png')"><img class="fnfnewsicon" src="bbc.png"/></a>
+				  <a href="#" onclick="FnFnewsUrl('	https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml','newyork.png')"><img class="fnfnewsicon" src="newyork.png"/></a>
+				  <a href="#" onclick="FnFnewsUrl('http://rss.cnn.com/rss/edition_world.rss','cnn.png')"><img class="fnfnewsicon" src="cnn.png"/></a>
+				  <a href="#" onclick="FnFnewsUrl('http://feeds.reuters.com/Reuters/worldNews','reuters.png')"><img class="fnfnewsicon" src="reuters.png"/></a>
 
-			<p  id="news" class="microsoft marquee"></p>
+				
+				 
+				  
+				  
+				  
+				
+				</div>
+			  </div>
+             
+			<p  id="news" class="microsoft marquee ">
+					   
+
+			</p>
 		
 	</div>
 
 
+<!--https://www.feedspot.com/infiniterss.php?q=site:http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Fworld%2Frss.xml
 
-		<script>
+ https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml
+-->
 
-			$(document).ready(function() {
-	
-		//feed to parse
-		var feed = "https://cors-anywhere.herokuapp.com/http://www.dailyjanakantha.com/rss.php";
-		
-		$.ajax(feed, {
-			accepts:{
-				xml:"application/rss+xml"
-			},
-			dataType:"xml",
-			success:function(data) {
-				var newsarray=[];
-				$(data).find("item").each(function () { // or "item" or whatever suits your feed
-					var el = $(this);
-				 
-					newsarray.push('<a href="' + el.find('link').text()+'">'+el.find('title').text() + '</a>');
-			 
-	
-					console.log("------------------------");
-					console.log("title      : " + el.find("title").text());
-					console.log("link       : " + el.find("link").text());
-					console.log("description: " + el.find("description").text());
-				});
-				document.getElementById("news").innerHTML = newsarray;
-     
-	
-			}	
-		});
-		
-	});
-	$(".toggle").on("click", function () {
-    $(".marquee").toggleClass("microsoft");
-});
-		</script>
 
   </body>
 </html>
