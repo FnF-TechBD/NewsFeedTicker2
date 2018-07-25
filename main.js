@@ -25,7 +25,7 @@ function FnFnewsUrl(newsurl,imgsource){
             $(data).find("item").each(function () { // dateFormat(el.find("pubDate").text()) or "item" or whatever suits your feed
                 var el = $(this);
              
-                newsarray.push('<img class="fnfnnewshowicon" src="'+imgsource+'"/><a href="' + el.find('link').text()+'">'+el.find('title').text() + '</a>');
+                newsarray.push('<img class="fnfnnewshowicon" src="'+imgsource+'"/><a href="' + el.find('link').text()+'"> '+el.find('title').text() + '</a>');
          
 
                 console.log("------------------------");

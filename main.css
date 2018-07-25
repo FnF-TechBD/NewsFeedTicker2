@@ -1,4 +1,10 @@
 
+.fnf_main_container{
+    height: 150px;
+    width: 100%;
+  
+}
+
 .fnfnewsicon{
     width: 35px;
     height: 35px;
@@ -30,14 +36,16 @@
 }
 
 /* Make it pretty */
-.microsoft {
+.fnf_main_container .microsoft {
     padding-left: 1.5em;
-    position: relative;
+    position: absolute;
+    left: 210px;
+    top: 25px;
     font: 16px 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
 }
 
-/* ::before was :before before ::before was ::before - kthx */
-.microsoft:before, .microsoft::before {
+/* ::before was :before before ::before was ::before - kthx 
+.fnf_main_container .microsoft:before, .microsoft::before {
     z-index: 2;
     content: '';
     position: absolute;
@@ -50,7 +58,7 @@
 	1.6em 1.85em 0 rgb(233, 81, 35);
 }
 
-.microsoft:after, .microsoft::after {
+.fnf_main_container .microsoft:after, .microsoft::after {
     z-index: 1;
     content: '';
     position: absolute;
@@ -83,37 +91,45 @@
 }
 
 /*Select Channel*/
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+.fnf_main_container .dropbtn {
+    background-color: DodgerBlue;
     border: none;
+    color: white;
+    padding: 12px 12px;
+    font-size: 12px;
+    position: absolute;
+    top:6px;
+    left: 110px;
+    cursor: pointer;
 }
-
-.dropdown {
+.fnf_main_container .dropbtn:hover {
+    background-color: RoyalBlue;
+}
+.fnf_main_container .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
-.dropdown-content {
+.fnf_main_container .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 44px;
+    left: 110px;
 }
 
-.dropdown-content a {
+.fnf_main_container .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.fnf_main_container .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.fnf_main_container .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.fnf_main_container .dropdown:hover .dropbtn {background-color: #1886ec;}
